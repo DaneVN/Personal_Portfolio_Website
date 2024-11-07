@@ -315,7 +315,15 @@ header {
 
 .service {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0;
+  background-color: var(--clr-darker);
+  border-radius: 20px;
+  padding: 50px 10px;
+  transition: transform 0.1s;
+}
+
+.service:hover {
+  transform: scale(1.15);
 }
 .service > {
   color: white;
@@ -430,6 +438,7 @@ header {
   margin-right: auto;
 }
 
+/* ============= CONTACT SECTION STYLES ============== */
 /* Container styling */
 .container {
   display: flex;
@@ -472,6 +481,7 @@ header {
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--clr-light);
+  margin-bottom: 0;
 }
 
 .card-text {
@@ -484,6 +494,7 @@ header {
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--clr-accent);
+  margin-bottom: 20px;
 }
 
 /* CONTACT SECTION */
@@ -509,4 +520,50 @@ header {
 }
 .website-card__link:hover {
   color: White;
+}
+
+/* Modal */
+
+.view-project-modal-window {
+  /* visibility: hidden; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  flex-direction: column;
+  padding: 30px;
+  gap: 20px;
+  background-color: var(--primary-color);
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 10px;
+  display: none;
+  z-index: 45;
+  transition: all 0.3s ease-in;
+}
+
+.viewBtns {
+  display: flex;
+  justify-content: space-between; /* This will space out the buttons evenly */
+  flex: 1; /* This will make both buttons flex equally */
+  margin: 0 10px; /* This adds spacing between the buttons */
+  max-height: 60px;
+  flex-grow: 1; /* Allows the button to grow */
+  padding: 100px 0; /* Adjust padding as necessary */
+  background-color: #219c90;
+  color: white;
+  border-radius: 30px;
+  border: 0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.project-title {
+  color: var(--primary-font-color);
+  font-size: 18px;
+}
+.project-description {
+  color: var(--secondary-font-color);
+  font-size: 16px;
 }
