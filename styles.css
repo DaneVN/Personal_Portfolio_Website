@@ -589,7 +589,7 @@ header {
   letter-spacing: -0.1px;
   max-width: 25rem;
   margin: 0 auto;
-  color: var(--clr-dark);
+  color: var(--clr-accent);
 }
 
 .overlay__blur {
@@ -601,6 +601,9 @@ header {
 }
 
 .overlay__image {
+  /* !! */
+  /* visibility: hidden; */
+  /* !! */
   max-width: 10rem;
   position: absolute;
   top: 1.5m;
@@ -616,11 +619,11 @@ header {
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  color: var(--clr-dark);
+  color: var(--clr-accent);
 }
 
 .overlay__data_secondary {
-  color: var(--clr-dark);
+  color: var(--clr-accent);
 }
 
 .overlay__content {

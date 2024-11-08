@@ -10,7 +10,7 @@ for (let i = 0; i < elements.porfolioItemsList.length; i++) {
     //visibility
     elements.activePortfolioItemOverlay.open = true;
     //data
-    elements.overlayPreview.innerHTML = `
+    elements.portfolioInformation.innerHTML = `
     <div class="overlay__preview">
         <img class="overlay__blur" src="" /><img
           class="overlay__image"
