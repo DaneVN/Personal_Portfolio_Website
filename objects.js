@@ -1,8 +1,10 @@
 export const elements = {
+  //portfolio items
   porfolioItemsList: document.querySelectorAll("#portfolio-item"),
+  comingSoonItemList: document.querySelectorAll("#coming-soon-item"),
   activePortfolioItemOverlay: document.querySelector("[portfolio-item-active]"),
-  closeOverlayBtn: document.querySelector("[portfolio-item-close]"),
   // overlay items
+  closeOverlayBtn: document.querySelector("[portfolio-item-close]"),
   portfolioInformation: document.querySelector("#information"),
   portfolioItemImage: document.querySelector("[portfolio-item-image]"),
   portfolioItemLink: document.querySelector("[portfolio-item-subtitle]"),
@@ -35,5 +37,16 @@ export const projectsArray = [
       JavaScript`,
     link: "https://dane-bank-landingpage.netlify.app/",
     imgPath: "./img/dane-bank-landingpage.png",
+  },
+];
+
+export const comingSoonArray = [
+  {
+    title: "Podcast app",
+    description: `A website that functions the same as a generic podcast
+    app using API's State Store and otheer higher level programming concepts`,
+    //estimated time of completion
+    ETC: "First Week of December 2024",
+    imgPath: "./img/coming-soon-1.png",
   },
 ];
