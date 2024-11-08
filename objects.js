@@ -3,6 +3,7 @@ export const elements = {
   activePortfolioItemOverlay: document.querySelector("[portfolio-item-active]"),
   closeOverlayBtn: document.querySelector("[portfolio-item-close]"),
   // overlay items
+  overlayPreview: document.querySelector(".overlay__preview"),
   portfolioItemImage: document.querySelector("[portfolio-item-image]"),
   portfolioItemLink: document.querySelector("[portfolio-item-subtitle]"),
   portfolioItemDesc: document.querySelector("[portfolio-item-description]"),
