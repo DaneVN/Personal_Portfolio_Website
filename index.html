@@ -26,6 +26,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./src/animation.js" defer></script>
+    <script src="./src/scripts.js" defer></script>
   </head>
   <body>
     <header>
@@ -106,45 +107,33 @@
 
       <div class="portfolio">
         <!-- Portfolio item 01 -->
-        <a
-          href="https://dane-kanban.netlify.app"
-          target="_blank"
-          class="portfolio__item"
-        >
+        <button class="portfolio__item" id="portfolio-item">
           <img
             src="./img/dane-kanban.png"
             alt="Dane kanban website"
             class="portfolio__img"
           />
-        </a>
+        </button>
       </div>
       <div>
         <!-- Portfolio item 02 -->
-        <a
-          href="https://dane-dashboard-extention.netlify.app/"
-          target="_blank"
-          class="portfolio__item"
-        >
+        <button class="portfolio__item" id="portfolio-item">
           <img
             src="./img/dashboard-extention.png"
             alt="dashboard-extention website"
             class="portfolio__img"
           />
-        </a>
+        </button>
       </div>
       <div>
         <!-- Portfolio item 03 -->
-        <a
-          href="https://dane-bank-landingpage.netlify.app/"
-          target="_blank"
-          class="portfolio__item"
-        >
+        <button class="portfolio__item" id="portfolio-item">
           <img
             src="./img/dane-bank-landingpage.png"
             alt="Fictional bank landing page"
             class="portfolio__img"
           />
-        </a>
+        </button>
       </div>
     </section>
 
@@ -240,6 +229,33 @@
       </div>
     </section>
 
+    <!-- Modal -->
+    <dialog class="overlay" portfolio-item-active>
+      <div class="overlay__preview">
+        <img class="overlay__blur" src="" /><img
+          class="overlay__image"
+          portfolio-item-image
+          src=""
+        />
+      </div>
+      <div class="overlay__content">
+        <h3 class="overlay__title" portfolio-item-title></h3>
+        <div class="overlay__data" portfolio-item-subtitle></div>
+        <p
+          class="overlay__data overlay__data_secondary"
+          portfolio-item-description
+        ></p>
+      </div>
+
+      <div class="overlay__row">
+        <button
+          class="overlay__button overlay__button_primary"
+          portfolio-item-close
+        >
+          Close
+        </button>
+      </div>
+    </dialog>
     <!--  end  -->
   </body>
 </html>
