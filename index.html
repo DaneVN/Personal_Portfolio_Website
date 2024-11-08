@@ -26,7 +26,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./src/animation.js" defer></script>
-    <script src="./src/scripts.js" defer></script>
+    <script type="module" src="./src/scripts.js" defer></script>
   </head>
   <body>
     <header>
@@ -144,7 +144,7 @@
 
       <div class="portfolio">
         <!-- Portfolio item 01 -->
-        <button class="portfolio__item">
+        <button class="portfolio__item" id="portfolio-item">
           <img
             src="./img/coming-soon-1.png"
             alt="figma screenshot of a website"
@@ -235,12 +235,18 @@
         <img class="overlay__blur" src="" /><img
           class="overlay__image"
           portfolio-item-image
-          src=""
+          src="./img/coming-soon-1.png"
         />
       </div>
       <div class="overlay__content">
-        <h3 class="overlay__title" portfolio-item-title></h3>
-        <div class="overlay__data" portfolio-item-subtitle></div>
+        <h3 class="overlay__title" portfolio-item-title>
+          <a
+            class="overlay__data"
+            portfolio-item-subtitle
+            href=""
+            target="_blank"
+          ></a>
+        </h3>
         <p
           class="overlay__data overlay__data_secondary"
           portfolio-item-description

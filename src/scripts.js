@@ -1,42 +1,46 @@
-const elements = {
-  porfolioItemsList: document.querySelectorAll("#portfolio-item"),
-  activePortfolioItem: document.querySelector("[portfolio-item-active]"),
-  closeOverlayBtn: document.querySelector("[portfolio-item-close]"),
-  // overlay items
-};
-
-const projectsArray = [
-  {
-    title: "Kanban App",
-    desc: `A simple todo esque app that relies on local storage 
-        and a data file to persist tasks`,
-    link: "https://dane-kanban.netlify.app",
-    imgPath: "./img/dane-kanban.png",
-  },
-  {
-    title: "Dashboard extention",
-    desc: `A custom dashboard extention that uses API's and JavaScript to give 
-    live data on weather, Dogecoin and the current time. The background changes
-    everytime the page loads`,
-    link: "https://dane-dashboard-extention.netlify.app/",
-    imgPath: "./img/dashboard-extention.png",
-  },
-  {
-    title: "Fictional bank Landing page",
-    desc: `A bank Landing page for a fictional Bank catering for
-    software developers specifically. It makes use of HTML/CSS and 
-    JavaScript`,
-    link: "https://dane-bank-landingpage.netlify.app/",
-    imgPath: "./img/dane-bank-landingpage.png",
-  },
-];
+import { projectsArray, elements } from "../objects.js";
 
 elements.closeOverlayBtn.addEventListener("click", () => {
-  elements.activePortfolioItem.open = false;
+  //   elements.activePortfolioItemOverlay.open = false;
+  console.log("hi");
 });
 
-for (const item of elements.porfolioItemsList) {
+for (let i = 0; i < elements.porfolioItemsList.length; i++) {
+  const item = elements.porfolioItemsList[i];
   item.addEventListener("click", (event) => {
-    elements.activePortfolioItem.open = true;
+    //visibility
+    elements.activePortfolioItemOverlay.open = true;
+    //data
+    elements.activePortfolioItemOverlay.innerHTML = `
+    <div class="overlay__preview">
+    <img class="overlay__blur" src="" /><img
+    class="overlay__image"
+    portfolio-item-image
+    src="${projectsArray[i].imgPath}"
+    />
+    </div>
+    <div class="overlay__content">
+    <h3 class="overlay__title" portfolio-item-title>
+    <a
+    class="overlay__data"
+    portfolio-item-subtitle
+    href="${projectsArray[i].link}"
+    target="_blank"
+    > ${projectsArray[i].title}</a>
+    </h3>
+    <p
+    class="overlay__data overlay__data_secondary"
+    portfolio-item-description
+    >${projectsArray[i].desc}</p>
+    </div>
+    
+    <div class="overlay__row">
+    <button
+    class="overlay__button overlay__button_primary"
+    portfolio-item-close
+    >
+    Close
+    </button>
+    </div>`;
   });
 }
