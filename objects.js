@@ -2,13 +2,17 @@ export const elements = {
   //portfolio items
   porfolioItemsList: document.querySelectorAll("#portfolio-item"),
   comingSoonItemList: document.querySelectorAll("#coming-soon-item"),
-  activePortfolioItemOverlay: document.querySelector("[portfolio-item-active]"),
+  activePortfolioItemOverlay: document.querySelector(
+    "[data-portfolio-item-active]"
+  ),
   // overlay items
-  closeOverlayBtn: document.querySelector("[portfolio-item-close]"),
+  closeOverlayBtn: document.querySelector("[data-portfolio-item-close]"),
   portfolioInformation: document.querySelector("#information"),
-  portfolioItemImage: document.querySelector("[portfolio-item-image]"),
-  portfolioItemLink: document.querySelector("[portfolio-item-subtitle]"),
-  portfolioItemDesc: document.querySelector("[portfolio-item-description]"),
+  portfolioItemImage: document.querySelector("[data-portfolio-item-image]"),
+  portfolioItemLink: document.querySelector("[data-portfolio-item-subtitle]"),
+  portfolioItemDesc: document.querySelector(
+    "[data-portfolio-item-description]"
+  ),
 };
 
 export const projectsArray = [
@@ -16,7 +20,7 @@ export const projectsArray = [
     index: 0,
     title: "Kanban App",
     desc: `A simple todo esque app that relies on local storage 
-          and a data file to persist tasks`,
+          and a data file to persist tasks. Makes use of Local Storage, JS/HTML/CSS and Modal windows to achieve a suitable UI design`,
     link: "https://dane-kanban.netlify.app",
     imgPath: "./img/dane-kanban.png",
   },

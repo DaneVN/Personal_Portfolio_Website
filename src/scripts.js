@@ -14,12 +14,12 @@ for (let i = 0; i < elements.porfolioItemsList.length; i++) {
     <div class="overlay__preview">
         <img class="overlay__blur" src="" /><img
           class="overlay__image"
-          portfolio-item-image
+          data-portfolio-item-image
           src="${projectsArray[i].imgPath}"
         />
       </div>
       <div class="overlay__content">
-        <h3 class="overlay__title" portfolio-item-title>
+        <h3 class="overlay__title" data-portfolio-item-title>
           <a
             class="overlay__data"
             portfolio-item-subtitle
@@ -29,7 +29,7 @@ for (let i = 0; i < elements.porfolioItemsList.length; i++) {
         </h3>
         <p
           class="overlay__data overlay__data_secondary"
-          portfolio-item-description
+          data-portfolio-item-description
         >${projectsArray[i].desc}</p>
       </div>`;
   });
@@ -44,12 +44,12 @@ for (let i = 0; i < elements.comingSoonItemList.length; i++) {
     <div class="overlay__preview">
         <img class="overlay__blur" src="" /><img
           class="overlay__image"
-          portfolio-item-image
+          data-portfolio-item-image
           src="${comingSoonArray[i].imgPath}"
         />
       </div>
       <div class="overlay__content">
-        <h3 class="overlay__title" portfolio-item-title>
+        <h3 class="overlay__title" data-portfolio-item-title>
           <a
             class="overlay__data"
             portfolio-item-subtitle
@@ -59,7 +59,7 @@ for (let i = 0; i < elements.comingSoonItemList.length; i++) {
         </h3>
         <p
           class="overlay__data overlay__data_secondary"
-          portfolio-item-description
+          data-portfolio-item-description
         >( Coming: ${comingSoonArray[i].ETC} ) ${comingSoonArray[i].description}</p>
       </div>`;
   });
