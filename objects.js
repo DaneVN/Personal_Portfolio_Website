@@ -42,15 +42,31 @@ export const projectsArray = [
     link: "https://dane-bank-landingpage.netlify.app/",
     imgPath: "./img/dane-bank-landingpage.png",
   },
+  {
+    index: 3,
+    title: "Podcast app",
+    desc: `A website that functions the same as a generic podcast
+    app using API's State Store and otheer higher level programming concepts`,
+    link: "https://dane-podcast-app.netlify.app/",
+    imgPath: "./img/dane-podcast-app.png",
+  },
+  {
+    index: 4,
+    title: "TicTacToe WPF",
+    desc: `A Windows Presentation foundation that functions the same as a traditional TicTacToe game. 
+    It makes use of the Grid elements and C# for it's logic and functionality`,
+    link: "https://github.com/DaneVN/TicTacToe/tree/main",
+    imgPath: "./img/tictactoe-wpf.png",
+  },
 ];
 
 export const comingSoonArray = [
   {
-    title: "Podcast app",
-    description: `A website that functions the same as a generic podcast
-    app using API's State Store and otheer higher level programming concepts`,
+    title: "Wedding Invitation",
+    description: `A website that displays the needed information to be sent out to guests as a link. 
+    It can serve as a 'save the date' or an invitation card`,
     //estimated time of completion
-    ETC: "First Week of December 2024",
+    ETC: "End of February",
     imgPath: "./img/coming-soon-1.png",
   },
 ];

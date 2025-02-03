@@ -408,12 +408,12 @@ nav.nav {
   background: var(--clr-accent);
   overflow: hidden;
   padding: 0;
-  max-width: 500px;
   margin: 1rem auto;
 }
 
 .portfolio__img {
   transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+  max-width: 500px;
 
   /*fit oddly shaped images into the frame*/
   position: relative;
@@ -604,7 +604,6 @@ nav.nav {
 .overlay__data {
   font-size: 0.9rem;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   color: var(--clr-accent);
