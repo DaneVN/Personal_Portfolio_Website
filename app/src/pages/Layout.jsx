@@ -14,7 +14,7 @@ const Layout = () => {
         className="bg-[#242424] sticky top-0 z-20 transition-top duration-300 
     ease-in-out"
       >
-        <nav className="grid grid-cols-4 p-5 gap-2 text-2xl sm:text-4xl">
+        <nav className="grid grid-cols-4 p-5 gap-2 text-2xl sm:text-4xl md:text-6xl">
           <NavLink
             to="/"
             className="col-span-1 self-center"
@@ -22,7 +22,7 @@ const Layout = () => {
           >
             home
           </NavLink>
-          <span className="col-span-3 flex justify-evenly items-center text-xs sm:text-xl ">
+          <span className="col-span-3 flex justify-evenly items-center text-xs sm:text-xl md:text-3xl">
             {/* Conditionally render frontend and backend links only if NOT on the home page */}
             {!isHome && (
               <>
@@ -56,7 +56,7 @@ const Layout = () => {
         </nav>
       </header>
       <Outlet />
-      <footer className="text-xs flex justify-evenly mt-2">
+      <footer className="text-xs md:text-lg flex justify-evenly mt-2">
         <p>
           created by <span className="font-bold"> Dané van Niekerk </span>
         </p>

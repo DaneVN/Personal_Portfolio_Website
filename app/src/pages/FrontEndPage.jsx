@@ -2,12 +2,9 @@ import React from "react";
 
 const FrontEndPage = () => {
   return (
-    <div className="bg-[var(--clf-offWhite)]">
+    <div className="bg-[var(--clf-offWhite)] lg:text-2xl">
       {/* section 1: Intro and NavBar */}
-      <section
-        id="section1"
-        className="py-4 p-1 flex flex-col items-center text-[var(--clf-dark)]"
-      >
+      <section id="section1" className="py-4 p-1 text-[var(--clf-dark)]">
         <div>
           This is a section that will contain my name a picture of me and the
           navigation to the rest of this page's sections
@@ -31,7 +28,7 @@ const FrontEndPage = () => {
           relevant to programming
         </div>
       </section>
-      {/* section 4: portfolio/Projects */}
+      {/* section 4: Portfolio/Projects */}
       <section
         id="section4"
         className="py-4 p-1 bg-[var(--clf-blue)] text-[var(--clf-dark)]"

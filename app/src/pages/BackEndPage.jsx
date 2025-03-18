@@ -2,7 +2,7 @@ import React from "react";
 
 const FrontEndPage = () => {
   return (
-    <div className="bg-[var(--clf-offWhite)] text-[var(--clb-darkest)]">
+    <div className="bg-[var(--clf-offWhite)] text-[var(--clb-darkest)]  lg:text-2xl">
       {/* section 1: Intro and NavBar */}
       <section
         id="section1"
