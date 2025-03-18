@@ -9,14 +9,14 @@ const HomePage = () => {
       </h2>
       <section className="flex flex-col items-stretch gap-[10vh]">
         <NavLink
-          className="bg-blue-500 py-[5vh] px-[10vw] flex justify-between rounded-2xl text-2xl sm:text-3xl font-serif"
+          className="bg-[var(--clb-darker)] hover:bg-[var(--clf-yellow)] active:bg-[var(--clf-blue)] active:text-[var(--clf-offWhite)] py-[5vh] px-[10vw] flex justify-between rounded-2xl text-2xl sm:text-3xl font-serif"
           to="/frontend"
         >
           Website Design
           {/* add an image of a right facing arrow */}
         </NavLink>
         <NavLink
-          className="bg-blue-500 py-[5vh] px-[10vw] flex justify-between rounded-2xl text-2xl sm:text-3xl font-serif"
+          className="bg-[var(--clb-darker)] hover:bg-[var(--clb-purple)] active:bg-[var(--clb-darkest)]  py-[5vh] px-[10vw] flex justify-between rounded-2xl text-2xl sm:text-3xl font-serif"
           to="/frontend"
         >
           Game Design
