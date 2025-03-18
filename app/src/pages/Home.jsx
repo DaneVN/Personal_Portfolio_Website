@@ -1,11 +1,10 @@
 import React from "react";
-import NavBar from "../assets/components/navbar";
 
 const HomePage = () => {
   return (
-    <>
-      <NavBar></NavBar>
-    </>
+    <main className="my-4 flex flex-col items-center">
+      <div>Here You can Make Your Choice</div>
+    </main>
   );
 };
 
