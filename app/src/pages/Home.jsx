@@ -21,7 +21,7 @@ const HomePage = () => {
           className="bg-[var(--clb-darker)] hover:bg-[var(--clb-purple)] origin-center transition-all 
           hover:scale-110 active:bg-[var(--clb-darkest)] h-[15vh] w-[70vw] rounded-2xl text-2xl 
           sm:text-3xl font-serif flex gap-3 justify-center items-center"
-          to="/frontend"
+          to="/backend"
         >
           Game Design
           <img src="/assets/RightArrow1.svg" className="w-16" />
