@@ -2,5 +2,21 @@
   max-width: 1280px;
   margin: 0;
   padding: 0;
+
+  /* front-end colour palette */
+  --clf-yellow: #fec449;
+  --clf-pink: #feccb5;
+  --clf-blue: #9bd3d0;
+  --clf-offWhite: #fcf3e2;
+  --clf-dark: #373737;
+  --clf-light: #fbffff;
+
+  /* back-end colour palette */
+  --clb-darkest: #291c3a;
+  --clb-darker: #331c52;
+  --clb-purple: #8121d0;
+  --clb-lighter: #dccfed;
+  --clb-accent: #e1ebed;
+  --clb-lightest: #ffffff;
 }
 @import "tailwindcss";

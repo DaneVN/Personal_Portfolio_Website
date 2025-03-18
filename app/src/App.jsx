@@ -4,7 +4,7 @@ import Layout from "./pages/Layout.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FrontEndPage from "./pages/FrontEndPage.jsx";
 import BackEndPage from "./pages/BackEndPage.jsx";
-import HomePage from "./pages/home.jsx";
+import HomePage from "./pages/Home.jsx";
 
 function App() {
   return (
