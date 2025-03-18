@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FrontEndPage from "./pages/FrontEndPage.jsx";
 import BackEndPage from "./pages/BackEndPage.jsx";
 import HomePage from "./pages/Home.jsx";
+import Error from "./pages/Errror.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/frontend" element={<FrontEndPage />} />
           <Route path="/backend" element={<BackEndPage />} />
         </Route>
+        <Route path="*" element={<Error />}></Route>
       </Routes>
     </BrowserRouter>
   );
