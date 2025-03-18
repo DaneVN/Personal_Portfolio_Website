@@ -1,18 +1,13 @@
 import React from "react";
+import IntroSection from "../assets/components/IntroSection";
+import AboutMe from "../assets/components/AboutMe";
+import ContactMe from "../assets/components/ContactMeSection";
 
 const FrontEndPage = () => {
   return (
     <div className="bg-[var(--clf-offWhite)] text-[var(--clb-darkest)]  lg:text-2xl">
-      {/* section 1: Intro and NavBar */}
-      <section
-        id="section1"
-        className="py-4 p-1 bg-[var(--clb-darker)] text-[var(--clb-lighter)]"
-      >
-        <div>
-          This is a section that will contain my name a picture of me and the
-          navigation to the rest of this page's sections
-        </div>
-      </section>
+      <IntroSection className="bg-[var(--clb-darker)] text-[var(--clb-lighter)]" />
+
       {/* section 2: Skills */}
       <section id="section2" className="py-4 p-1 bg-[var(--clb-accent)]">
         <div>
@@ -21,13 +16,9 @@ const FrontEndPage = () => {
         </div>
         <div>e.g. CSS/HTML, JavaScript, React.js, TailwindCSS, router </div>
       </section>
-      {/* section 3: About Me */}
-      <section id="section3" className="py-4 p-1 bg-[var(--clb-accent)]">
-        <div>
-          This will contain A collapsable paragraph that details things about me
-          relevant to programming
-        </div>
-      </section>
+
+      <AboutMe className="bg-[var(--clb-accent)]" />
+
       {/* section 4: portfolio/Projects */}
       <section id="section4" className="py-4 p-1 bg-[var(--clb-accent)]">
         <div>
@@ -37,15 +28,8 @@ const FrontEndPage = () => {
           well as the README.md Link on the GitHub Repo
         </div>
       </section>
-      {/* section 5: Contact Me */}
-      <section id="section5" className="py-4 p-1 bg-[var(--clb-lightest)]">
-        <div>
-          This will contain a form that allows the user of the website to send
-          an email to my (fixed) professional email and hold svg icons as links
-          to different accounts of mine
-        </div>
-        <div>e.g. GitHub, LinkedIn</div>
-      </section>
+
+      <ContactMe className="bg-[var(--clb-lightest)]" />
     </div>
   );
 };
