@@ -41,7 +41,7 @@ const Layout = () => {
         </nav>
       </header>
       <Outlet />
-      <footer className="text-xs">
+      <footer className="text-xs justify-self-center mt-2">
         <p>
           created by <span className="font-bold"> Dané van Niekerk </span>
         </p>
