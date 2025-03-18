@@ -15,8 +15,8 @@
   --clb-darkest: #291c3a;
   --clb-darker: #331c52;
   --clb-purple: #8121d0;
-  --clb-lighter: #dccfed;
+  --clb-lighter: #8a70af;
+  --clb-lightest: #dccfed;
   --clb-accent: #e1ebed;
-  --clb-lightest: #ffffff;
 }
 @import "tailwindcss";
