@@ -4,10 +4,6 @@ const Layout = () => {
   const location = useLocation(); // Get the current location
   const isHome = location.pathname === "/"; // Check if the current path is "/"
 
-  const activeStyles = {
-    fontWeight: "bold",
-    color: "var(--clb-purple)",
-  };
   return (
     <>
       <header
@@ -18,9 +14,16 @@ const Layout = () => {
           <NavLink
             to="/"
             className="col-span-1 self-center"
-            style={({ isActive }) => (isActive ? activeStyles : null)}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    fontWeight: "bold",
+                    color: "var(--clb-purple)",
+                  }
+                : null
+            }
           >
-            home
+            Home
           </NavLink>
           <span className="col-span-3 flex justify-evenly items-center text-xs sm:text-xl md:text-3xl">
             {/* Conditionally render frontend and backend links only if NOT on the home page */}
@@ -28,25 +31,25 @@ const Layout = () => {
               <>
                 <a
                   href="#section2"
-                  className="active:var(--clb-purple) active:bold"
+                  className="active:text-[var(--clb-purple)] active:bold"
                 >
                   Skills
                 </a>
                 <a
                   href="#section3"
-                  className="active:var(--clb-purple) active:bold"
+                  className="active:text-[var(--clb-purple)] active:bold"
                 >
                   About Me
                 </a>
                 <a
                   href="#section4"
-                  className="active:var(--clb-purple) active:bold"
+                  className="active:text-[var(--clb-purple)] active:bold"
                 >
                   Projects
                 </a>
                 <a
                   href="#section5"
-                  className="active:var(--clb-purple) active:bold"
+                  className="active:text-[var(--clb-purple)] active:bold"
                 >
                   Contact
                 </a>
