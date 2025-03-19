@@ -7,11 +7,12 @@ import { frontEndProjects } from "../assets/data.js";
 import ProjectModal from "../assets/elements/ProjectsModal";
 
 const FrontEndPage = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [selectedProject, setSelectedProject] = React.useState(null);
+  const [isHidden, setIsHidden] = React.useState(true);
 
   function CloseModal() {
-    setIsOpen(false);
+    setIsModalOpen(false);
   }
   function OpenModal(project) {
     if (project) {
@@ -23,7 +24,10 @@ const FrontEndPage = () => {
         dailyCompleted: 0,
       });
     }
-    setIsOpen(true);
+    setIsModalOpen(true);
+  }
+  function toggleHidden() {
+    setIsHidden(!isHidden);
   }
 
   return (
@@ -36,29 +40,33 @@ const FrontEndPage = () => {
 
       {/* section 4: Portfolio/Projects */}
       <section id="section4" className="py-4 p-1 bg-[var(--clf-blue)]">
-        <h2 className="font-extrabold py-3 ">Cool Stuff I’ve Built</h2>
-        <div className="flex flex-wrap justify-center gap-5">
-          {frontEndProjects.map((project) => {
-            return (
-              <button
-                key={project.index}
-                className=" overflow-hidden hover:scale-110 transition-all rounded-md"
-                onClick={() => OpenModal({ ...project })}
-              >
-                <img
-                  className="w-[200px] h-[200px] sm:w-[300px] sm:h-[300px]"
-                  src={project.imgPath}
-                  alt={project.name}
-                />
-              </button>
-            );
-          })}
-        </div>
+        <h2 className="font-extrabold py-3" onClick={toggleHidden}>
+          Cool Stuff I’ve Built
+        </h2>
+        {!isHidden && (
+          <div className="flex flex-wrap justify-center gap-5">
+            {frontEndProjects.map((project) => {
+              return (
+                <button
+                  key={project.index}
+                  className=" overflow-hidden hover:scale-110 transition-all rounded-md"
+                  onClick={() => OpenModal({ ...project })}
+                >
+                  <img
+                    className="w-[200px] h-[200px] sm:w-[300px] sm:h-[300px]"
+                    src={project.imgPath}
+                    alt={project.name}
+                  />
+                </button>
+              );
+            })}
+          </div>
+        )}
       </section>
-      {isOpen && (
+      {isModalOpen && (
         <ProjectModal
           closeModalFn={CloseModal}
-          isOpen={isOpen}
+          isModalOpen={isModalOpen}
           project={selectedProject}
         />
       )}

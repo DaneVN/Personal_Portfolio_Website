@@ -2,17 +2,22 @@ import React from "react";
 import SkillCard from "../elements/SkillCard";
 
 export default function SkillsSection({ flag }) {
-  if (flag == "back") {
-    return (
-      <>
-        {/* section 2: Skills */}
-        <section
-          id="section2"
-          className="p-1 pb-4 pt-0 bg-[var(--clb-accent)] flex flex-col items-center"
-        >
-          <h2 className="font-extrabold py-3">
-            What I Bring to the Table (Tech Skills)
-          </h2>
+  const [isHidden, setIsHidden] = React.useState(true);
+
+  function toggleHidden() {
+    setIsHidden(!isHidden);
+  }
+  return (
+    <>
+      {/* section 2: Skills */}
+      <section
+        id="section2"
+        className="py-4 p-1 bg-[var(--clb-accent)] flex flex-col items-center"
+      >
+        <h2 className="font-extrabold py-3" onClick={toggleHidden}>
+          What I Bring to the Table (Tech Skills)
+        </h2>
+        {flag == "back" && !isHidden ? (
           <div className="flex flex-wrap gap-3">
             <SkillCard className="bg-[var(--clb-lighter)]" title="C#">
               Powering back-end logic like a pro.
@@ -27,20 +32,7 @@ export default function SkillsSection({ flag }) {
               Bringing games to life.
             </SkillCard>
           </div>
-        </section>
-      </>
-    );
-  } else if (flag == "front") {
-    return (
-      <>
-        {/* section 2: Skills */}
-        <section
-          id="section2"
-          className="p-1 pb-4 pt-0 bg-[var(--clb-accent)] flex flex-col items-center"
-        >
-          <h2 className="font-bold py-3">
-            What I Bring to the Table (Tech Skills)"
-          </h2>
+        ) : flag == "front" && !isHidden ? (
           <div className="flex flex-wrap gap-3">
             <SkillCard className="bg-[var(--clf-blue)]" title="HTML5 & CSS3">
               Bringing structure and style to the web.
@@ -58,8 +50,10 @@ export default function SkillsSection({ flag }) {
               Crafting dynamic and responsive user interfaces.
             </SkillCard>
           </div>
-        </section>
-      </>
-    );
-  }
+        ) : (
+          <></>
+        )}
+      </section>
+    </>
+  );
 }
