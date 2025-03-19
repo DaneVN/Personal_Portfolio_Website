@@ -3,11 +3,12 @@ import IntroSection from "../assets/sections/IntroSection";
 import AboutMe from "../assets/sections/AboutMe";
 import ContactMe from "../assets/sections/ContactMeSection";
 import SkillsSection from "../assets/sections/SkillsSection";
+import ProjectModal from "../assets/elements/ProjectsModal";
+import { frontEndProjects } from "../assets/data.js";
 
 const FrontEndPage = () => {
-  // const projects = [{}];
   return (
-    <main className="bg-[var(--clf-offWhite)] scroll-smooth transition-all lg:text-2xl text-[var(--clf-dark)]">
+    <div className="bg-[var(--clf-offWhite)] text-[var(--clf-dark)]">
       <IntroSection className="" bg="bg-[var(--clf-pink)]" />
 
       <SkillsSection flag="front" />
@@ -23,9 +24,10 @@ const FrontEndPage = () => {
           well as the README.md Link on the GitHub Repo
         </div>
       </section>
+      <ProjectModal isOpen={true} project={{ ...frontEndProjects[4] }} />
 
       <ContactMe className="bg-[var(--clf-pink)]" />
-    </main>
+    </div>
   );
 };
 

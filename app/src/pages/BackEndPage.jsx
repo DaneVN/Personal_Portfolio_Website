@@ -6,7 +6,7 @@ import SkillsSection from "../assets/sections/SkillsSection";
 
 const FrontEndPage = () => {
   return (
-    <main className="bg-[var(--clf-offWhite)] text-[var(--clb-darkest)]  lg:text-2xl">
+    <div className="text-[var(--clb-darkest)]">
       <IntroSection
         className="text-[var(--clb-lighter)] bg-[var(--clb-darker)]"
         bg="bg-[var(--clb-purple)]"
@@ -27,7 +27,7 @@ const FrontEndPage = () => {
       </section>
 
       <ContactMe className="bg-[var(--clb-lightest)]" />
-    </main>
+    </div>
   );
 };
 
