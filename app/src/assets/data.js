@@ -43,4 +43,15 @@ const frontEndProjects = [
   },
 ];
 
-export { frontEndProjects };
+const backEndProjects = [
+  {
+    index: 0,
+    name: "TicTacToe WPF",
+    desc: `A Windows Presentation foundation that functions the same as a traditional TicTacToe game. 
+    It makes use of the Grid elements and C# for it's logic and functionality`,
+    link: "https://github.com/DaneVN/TicTacToe/tree/main",
+    imgPath: "/assets/tictactoe-wpf.png",
+  },
+];
+
+export { frontEndProjects, backEndProjects };

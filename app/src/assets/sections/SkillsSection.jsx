@@ -2,20 +2,20 @@ import React from "react";
 import SkillCard from "../elements/SkillCard";
 
 export default function SkillsSection({ flag }) {
-  const [isHidden, setIsHidden] = React.useState(true);
+  const [isHidden, setIsHidden] = React.useState(false);
 
   function toggleHidden() {
     setIsHidden(!isHidden);
   }
   return (
     <>
-      {/* section 2: Skills */}
       <section
         id="section2"
-        className="py-4 p-1 bg-[var(--clb-accent)] flex flex-col items-center"
+        className="p-1 bg-[var(--clb-accent)] flex flex-col items-center"
       >
-        <h2 className="font-extrabold py-3" onClick={toggleHidden}>
-          What I Bring to the Table (Tech Skills)
+        <h2 className="font-extrabold py-16" onClick={toggleHidden}>
+          What I Bring to the Table (Tech Skills){" "}
+          <span className="text-gray-500">V</span>
         </h2>
         {flag == "back" && !isHidden ? (
           <div className="flex flex-wrap gap-3">

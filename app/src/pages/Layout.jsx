@@ -6,10 +6,7 @@ const Layout = () => {
 
   return (
     <>
-      <header
-        className="bg-[#242424] sticky top-0 z-90 transition-top duration-300 
-    ease-in-out"
-      >
+      <header className="bg-[#242424] sticky top-0 z-90">
         <nav className="grid grid-cols-4 p-5 gap-2 text-2xl sm:text-4xl md:text-6xl">
           <NavLink
             to="/"
@@ -58,7 +55,7 @@ const Layout = () => {
           </span>
         </nav>
       </header>
-      <main className="text-center scroll-smooth transition-all lg:text-2xl ">
+      <main className="text-center lg:text-2xl ">
         <Outlet />
       </main>
       <footer className="text-xs md:text-lg flex justify-evenly mt-2">

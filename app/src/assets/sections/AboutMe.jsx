@@ -8,10 +8,10 @@ export default function AboutMe({ className }) {
   }
   return (
     <>
-      {/* section 3: About Me */}
-      <section id="section3" className={`py-4 p-1 ${className}`}>
-        <h2 className="font-extrabold py-3" onClick={toggleHidden}>
-          Who Am I? (Spoiler: A Code Enthusiast!)
+      <section className={`p-1 ${className}`} id="section3">
+        <h2 className="font-extrabold py-16" onClick={toggleHidden}>
+          Who Am I? (Spoiler: A Code Enthusiast!){" "}
+          <span className="text-gray-500">V</span>
         </h2>
         {!isHidden && (
           <p>

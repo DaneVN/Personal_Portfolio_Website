@@ -8,17 +8,20 @@ export default function ContactForm() {
       className="grow flex flex-col gap-5 items-start mx-5"
     >
       <div>
-        <label htmlFor="email">Email Address</label>
         <input
-          className="ml-1 rounded-md border-[var(--clf-dark)] border-2"
+          className="rounded-md border-[var(--clf-dark)] border-2 px-2 py-1"
+          id="email"
           type="email"
           name="email"
+          placeholder="Your email here..."
         />
       </div>
       <div className="grid grid-cols-3 gap-4 w-full">
         <textarea
-          className="ml-1 rounded-md col-span-2 col-start-1 border-[var(--clf-dark)] border-2"
+          className="rounded-md col-span-2 col-start-1 border-[var(--clf-dark)] border-2 px-2 py-1"
           name="message"
+          id="message"
+          placeholder="Feedback or message here..."
         />
         <button
           className="bg-[var(--clb-accent)] rounded-md col-start-3"

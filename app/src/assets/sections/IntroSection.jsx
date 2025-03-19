@@ -3,10 +3,9 @@ import React from "react";
 export default function IntroSection({ className, bg }) {
   return (
     <>
-      {/* section 1: Intro and NavBar */}
       <section
         id="section1"
-        className={`flex justify-between items-center pl-5 pt-5 font-bold ${className}`}
+        className={`flex justify-between items-center pl-5 pt-2 font-bold ${className}`}
       >
         <h1 className="text-lg ">
           I'm <span className="text-">Dané van Niekerk</span>

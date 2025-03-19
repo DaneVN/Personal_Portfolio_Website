@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function ProjectModal({ closeModalFn, isOpen, project }) {
-  if (isOpen)
+export default function ProjectModal({ closeModalFn, isModalOpen, project }) {
+  if (isModalOpen)
     return (
       <>
         {/* bg */}

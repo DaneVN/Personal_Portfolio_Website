@@ -9,7 +9,7 @@ import ProjectModal from "../assets/elements/ProjectsModal";
 const FrontEndPage = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [selectedProject, setSelectedProject] = React.useState(null);
-  const [isHidden, setIsHidden] = React.useState(true);
+  const [isHidden, setIsHidden] = React.useState(false);
 
   function CloseModal() {
     setIsModalOpen(false);
@@ -26,22 +26,23 @@ const FrontEndPage = () => {
     }
     setIsModalOpen(true);
   }
+
   function toggleHidden() {
     setIsHidden(!isHidden);
   }
 
   return (
     <div className="bg-[var(--clf-offWhite)] text-[var(--clf-dark)]">
-      <IntroSection className="" bg="bg-[var(--clf-pink)]" />
+      <IntroSection bg="bg-[var(--clf-pink)]" />
 
       <SkillsSection flag="front" />
 
       <AboutMe />
 
-      {/* section 4: Portfolio/Projects */}
-      <section id="section4" className="py-4 p-1 bg-[var(--clf-blue)]">
-        <h2 className="font-extrabold py-3" onClick={toggleHidden}>
-          Cool Stuff I’ve Built
+      <section id="section4" className="p-2 bg-[var(--clf-blue)]">
+        <h2 className="font-extrabold py-16" onClick={toggleHidden}>
+          Cool Stuff I’ve Built (Click them){" "}
+          <span className="text-gray-500">V</span>
         </h2>
         {!isHidden && (
           <div className="flex flex-wrap justify-center gap-5">
@@ -49,7 +50,7 @@ const FrontEndPage = () => {
               return (
                 <button
                   key={project.index}
-                  className=" overflow-hidden hover:scale-110 transition-all rounded-md"
+                  className="overflow-hidden hover:scale-110 transition-all rounded-md"
                   onClick={() => OpenModal({ ...project })}
                 >
                   <img
