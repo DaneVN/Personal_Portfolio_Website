@@ -12,7 +12,6 @@ const FrontEndPage = () => {
 
   function CloseModal() {
     setIsOpen(false);
-    console.log(isOpen);
   }
   function OpenModal(project) {
     if (project) {
