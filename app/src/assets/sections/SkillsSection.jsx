@@ -18,7 +18,7 @@ export default function SkillsSection({ flag }) {
           <span className="text-gray-500">V</span>
         </h2>
         {flag == "back" && !isHidden ? (
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-10 mb-15">
             <SkillCard className="bg-[var(--clb-lighter)]" title="C#">
               Powering back-end logic like a pro.
             </SkillCard>
@@ -33,7 +33,7 @@ export default function SkillsSection({ flag }) {
             </SkillCard>
           </div>
         ) : flag == "front" && !isHidden ? (
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-10 mb-15">
             <SkillCard className="bg-[var(--clf-blue)]" title="HTML5 & CSS3">
               Bringing structure and style to the web.
             </SkillCard>

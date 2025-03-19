@@ -48,12 +48,12 @@ const FrontEndPage = () => {
           <span className="text-gray-500">V</span>
         </h2>
         {!isHidden && (
-          <div className="flex flex-wrap justify-center gap-5">
+          <div className="flex flex-wrap justify-center gap-10 mb-15">
             {backEndProjects.map((project) => {
               return (
                 <button
                   key={project.index}
-                  className="overflow-hidden hover:scale-110 transition-all rounded-md"
+                  className="overflow-hidden hover:scale-110 transition-all rounded-md outline-[var(--clb-lightest)] outline-dotted outline-8"
                   onClick={() => OpenModal({ ...project })}
                 >
                   <img
