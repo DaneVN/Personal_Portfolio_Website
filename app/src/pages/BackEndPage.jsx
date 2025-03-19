@@ -1,8 +1,8 @@
 import React from "react";
-import IntroSection from "../assets/components/IntroSection";
-import AboutMe from "../assets/components/AboutMe";
-import ContactMe from "../assets/components/ContactMeSection";
-import SkillsSection from "../assets/components/SkillsSection";
+import IntroSection from "../assets/sections/IntroSection";
+import AboutMe from "../assets/sections/AboutMe";
+import ContactMe from "../assets/sections/ContactMeSection";
+import SkillsSection from "../assets/sections/SkillsSection";
 
 const FrontEndPage = () => {
   return (
