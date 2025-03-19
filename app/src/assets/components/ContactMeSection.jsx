@@ -10,7 +10,6 @@ export default function ContactMe({ className }) {
           an email to my (fixed) professional email and hold svg icons as links
           to different accounts of mine
         </div>
-        <div>e.g. GitHub, LinkedIn</div>
       </section>
     </>
   );

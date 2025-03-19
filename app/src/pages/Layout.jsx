@@ -49,7 +49,7 @@ const Layout = () => {
                 </a>
                 <a
                   href="#section5"
-                  className="active:text-[var(--clb-purple)] active:bold"
+                  className="bg-[var(--clf-blue)] text-[var(--clf-dark)] rounded-2xl py-2 px-5 active:bg-[var(--clb-purple)] active:bold"
                 >
                   Contact
                 </a>

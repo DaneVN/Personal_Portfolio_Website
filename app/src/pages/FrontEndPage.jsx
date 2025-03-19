@@ -2,11 +2,15 @@ import React from "react";
 import IntroSection from "../assets/components/IntroSection";
 import AboutMe from "../assets/components/AboutMe";
 import ContactMe from "../assets/components/ContactMeSection";
+import SkillCard from "../assets/elements/SkillCard.jsx";
 
 const FrontEndPage = () => {
   return (
-    <div className="bg-[var(--clf-offWhite)] lg:text-2xl">
-      <IntroSection className="text-[var(--clf-dark)]" />
+    <main className="bg-[var(--clf-offWhite)] scroll-smooth transition-all lg:text-2xl">
+      <IntroSection
+        className="text-[var(--clf-dark)]"
+        bg="bg-[var(--clf-pink)]"
+      />
 
       {/* section 2: Skills */}
       <section
@@ -15,9 +19,15 @@ const FrontEndPage = () => {
       >
         <div>
           This will contain a list of all the tech/programming languages i know
-          how to use
+          how to usee.g. CSS/HTML, JavaScript, React.js, TailwindCSS, router
         </div>
-        <div>e.g. CSS/HTML, JavaScript, React.js, TailwindCSS, router </div>
+        <div className="flex flex-wrap gap-3">
+          <SkillCard className="bg-[var(--clf-blue)]">Text text text</SkillCard>
+          <SkillCard className="bg-[var(--clf-pink)]">Text text text</SkillCard>
+          <SkillCard className="bg-[var(--clf-offWhite)]">
+            Text text text
+          </SkillCard>
+        </div>
       </section>
 
       <AboutMe className="text-[var(--clf-dark)]" />
@@ -36,7 +46,7 @@ const FrontEndPage = () => {
       </section>
 
       <ContactMe className="bg-[var(--clf-pink)] text-[var(--clf-dark)]" />
-    </div>
+    </main>
   );
 };
 
