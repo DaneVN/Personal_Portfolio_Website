@@ -5,7 +5,7 @@ export default function AboutMe({ className }) {
     <>
       {/* section 3: About Me */}
       <section id="section3" className={`py-4 p-1 ${className}`}>
-        <h2 className="font-extrabold py-3 ">
+        <h2 className="font-extrabold py-3">
           Who Am I? (Spoiler: A Code Enthusiast!)
         </h2>
         <p>

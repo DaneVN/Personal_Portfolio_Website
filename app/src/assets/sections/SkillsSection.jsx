@@ -49,12 +49,12 @@ export default function SkillsSection({ flag }) {
               Designing UIs faster than ever.
             </SkillCard>
             <SkillCard
-              className="bg-[var(--clf-pink)]"
+              className="bg-[var(--clf-blue)]"
               title="JavaScript & TypeScript"
             >
               Making web apps interactive & maintainable.
             </SkillCard>
-            <SkillCard className="bg-[var(--clf-blue)]" title="React.js">
+            <SkillCard className="bg-[var(--clf-pink)]" title="React.js">
               Crafting dynamic and responsive user interfaces.
             </SkillCard>
           </div>
