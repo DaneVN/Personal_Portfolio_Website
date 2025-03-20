@@ -72,8 +72,8 @@ const backEndSkill = [
   },
   {
     title: "Unity6  + C#",
-    desc: "",
-    link: "Bringing games to life.",
+    desc: "Bringing games to life.",
+    link: "",
   },
 ];
 const frontEndSkill = [

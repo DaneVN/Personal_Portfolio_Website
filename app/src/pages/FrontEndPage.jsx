@@ -39,7 +39,10 @@ const FrontEndPage = () => {
 
       <AboutMe />
 
-      <section id="section4" className="p-2 bg-[var(--clf-blue)]">
+      <section
+        id="section4"
+        className="p-2 bg-[var(--clf-blue)] hover:cursor-pointer"
+      >
         <h2 className="font-extrabold py-16" onClick={toggleHidden}>
           Cool Stuff I’ve Built (Click on them for more information){" "}
           <span className="text-gray-500">V</span>

@@ -16,7 +16,10 @@ export default function SkillsSection({ flag }) {
         id="section2"
         className="p-1 bg-[var(--clb-accent)] flex flex-col items-center"
       >
-        <h2 className="font-extrabold py-16" onClick={toggleHidden}>
+        <h2
+          className="font-extrabold py-16 hover:cursor-pointer"
+          onClick={toggleHidden}
+        >
           What I Bring to the Table (Tech Skills)
           <span className="text-gray-500">V</span>
         </h2>

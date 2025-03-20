@@ -39,10 +39,15 @@ const FrontEndPage = () => {
       />
 
       <SkillsSection flag="back" />
+      <hr className="w-full border-t-2 border-[var(--clb-lightest)]" />
 
       <AboutMe className="bg-[var(--clb-accent)]" />
+      <hr className="w-full border-t-2 border-[var(--clb-lightest)]" />
 
-      <section id="section4" className="py-4 p-1 bg-[var(--clb-accent)]">
+      <section
+        id="section4"
+        className="py-4 p-1 bg-[var(--clb-accent)] hover:cursor-pointer"
+      >
         <h2 className="font-extrabold py-16" onClick={toggleHidden}>
           Cool Stuff I’ve Built (Click them){" "}
           <span className="text-gray-500">V</span>
@@ -67,6 +72,7 @@ const FrontEndPage = () => {
           </div>
         )}
       </section>
+
       {isModalOpen && (
         <ProjectModal
           closeModalFn={CloseModal}
