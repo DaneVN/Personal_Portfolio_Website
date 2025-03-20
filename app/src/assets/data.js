@@ -54,4 +54,49 @@ const backEndProjects = [
   },
 ];
 
-export { frontEndProjects, backEndProjects };
+const backEndSkill = [
+  {
+    title: "C#",
+    desc: "Powering back-end logic like a pro.",
+    link: "",
+  },
+  {
+    title: "LINQ",
+    desc: "Making data queries efficient and seamless.",
+    link: "",
+  },
+  {
+    title: "WPF",
+    desc: "Crafting desktop applications with C#.",
+    link: "",
+  },
+  {
+    title: "Unity6  + C#",
+    desc: "",
+    link: "Bringing games to life.",
+  },
+];
+const frontEndSkill = [
+  {
+    title: "HTML5 & CSS3",
+    desc: "Bringing structure and style to the web.",
+    link: "",
+  },
+  {
+    title: "TailwindCSS",
+    desc: "Designing UIs faster than ever.",
+    link: "",
+  },
+  {
+    title: "JavaScript & TypeScript",
+    desc: "Making web apps interactive & maintainable.",
+    link: "",
+  },
+  {
+    title: "React.js",
+    desc: "Crafting dynamic and responsive user interfaces.",
+    link: "",
+  },
+];
+
+export { frontEndProjects, backEndProjects, backEndSkill, frontEndSkill };
