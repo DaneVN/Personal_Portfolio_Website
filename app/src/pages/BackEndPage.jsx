@@ -44,13 +44,13 @@ const FrontEndPage = () => {
       <AboutMe className="bg-[var(--clb-accent)]" />
       <hr className="w-full border-t-2 border-[var(--clb-lightest)]" />
 
-      <section
-        id="section4"
-        className="py-4 p-1 bg-[var(--clb-accent)] hover:cursor-pointer"
-      >
-        <h2 className="font-extrabold py-16" onClick={toggleHidden}>
+      <section id="section4" className="py-4 p-1 bg-[var(--clb-accent)]">
+        <h2
+          className="font-extrabold py-16 hover:cursor-pointer"
+          onClick={toggleHidden}
+        >
           Cool Stuff I’ve Built (Click them){" "}
-          <span className="text-gray-500">V</span>
+          <span className="text-gray-400">V</span>
         </h2>
         {!isHidden && (
           <div className="flex flex-wrap justify-center gap-10 mb-15">

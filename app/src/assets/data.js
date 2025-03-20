@@ -52,6 +52,30 @@ const backEndProjects = [
     link: "https://github.com/DaneVN/TicTacToe/tree/main",
     imgPath: "/assets/tictactoe-wpf.png",
   },
+  {
+    index: 1,
+    name: "Fruit ninja Clone Game",
+    desc: `A Windows Presentation foundation that functions the same as a traditional TicTacToe game. 
+    It makes use of the Grid elements and C# for it's logic and functionality`,
+    link: "https://danevn.itch.io/fruitninjaclone",
+    imgPath: "/assets/fruitNinjaClone.png",
+  },
+  {
+    index: 2,
+    name: "Ping Pong 2 Player Game",
+    desc: `A Windows Presentation foundation that functions the same as a traditional TicTacToe game. 
+    It makes use of the Grid elements and C# for it's logic and functionality`,
+    link: "https://danevn.itch.io/pingpong2d",
+    imgPath: "/assets/pingPongClone.png",
+  },
+  {
+    index: 3,
+    name: "Zig Zag 3D Clone Game",
+    desc: `A Windows Presentation foundation that functions the same as a traditional TicTacToe game. 
+    It makes use of the Grid elements and C# for it's logic and functionality`,
+    link: "https://danevn.itch.io/zig-zag-3d",
+    imgPath: "/assets/zigZagClone.png",
+  },
 ];
 
 const backEndSkill = [
@@ -73,7 +97,7 @@ const backEndSkill = [
   {
     title: "Unity6  + C#",
     desc: "Bringing games to life.",
-    link: "",
+    link: "https://www.canva.com/design/DAGiQ21ISX8/ocJqGVBxs3TPVQpmmU8j-Q/edit?utm_content=DAGiQ21ISX8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
   },
 ];
 const frontEndSkill = [

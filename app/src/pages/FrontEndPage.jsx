@@ -39,13 +39,13 @@ const FrontEndPage = () => {
 
       <AboutMe />
 
-      <section
-        id="section4"
-        className="p-2 bg-[var(--clf-blue)] hover:cursor-pointer"
-      >
-        <h2 className="font-extrabold py-16" onClick={toggleHidden}>
+      <section id="section4" className="p-2 bg-[var(--clf-blue)]">
+        <h2
+          className="font-extrabold py-16 hover:cursor-pointer"
+          onClick={toggleHidden}
+        >
           Cool Stuff I’ve Built (Click on them for more information){" "}
-          <span className="text-gray-500">V</span>
+          <span className="text-gray-400">V</span>
         </h2>
         {!isHidden && (
           <div className="flex flex-wrap justify-center gap-10 mb-15">

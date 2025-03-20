@@ -17,11 +17,11 @@ export default function SkillsSection({ flag }) {
         className="p-1 bg-[var(--clb-accent)] flex flex-col items-center"
       >
         <h2
-          className="font-extrabold py-16 hover:cursor-pointer"
+          className="font-extrabold w-full py-16 hover:cursor-pointer"
           onClick={toggleHidden}
         >
           What I Bring to the Table (Tech Skills)
-          <span className="text-gray-500">V</span>
+          <span className="text-gray-400">V</span>
         </h2>
         {flag == "back" && !isHidden ? (
           <div className={skillContainerStyle}>
@@ -29,11 +29,9 @@ export default function SkillsSection({ flag }) {
               return (
                 <SkillCard
                   key={index}
-                  className="bg-[var(--clb-lighter)]"
-                  title={skill.title}
-                >
-                  {skill.desc}
-                </SkillCard>
+                  className="bg-[var(--clb-lighter)] overflow-hidden hover:scale-110 transition-all"
+                  skill={skill}
+                ></SkillCard>
               );
             })}
           </div>

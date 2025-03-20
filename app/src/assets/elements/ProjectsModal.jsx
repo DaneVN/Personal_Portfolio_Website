@@ -5,7 +5,7 @@ export default function ProjectModal({ closeModalFn, isModalOpen, project }) {
     return (
       <>
         {/* bg */}
-        <div className="z-20 fixed top-0 left-0 w-full h-full flex justify-center items-center backdrop-blur text-[var(--clf-dark)] text-[1.5rem] sm:text-[2rem]">
+        <div className="z-20 fixed top-0 left-0 w-full h-full flex justify-center items-center backdrop-blur text-[var(--clf-dark)] text-[1.5rem] lg:text-[2rem]">
           {/* container */}
           <div className="bg-[var(--clf-offWhite)] p-4 rounded-2xl w-11/12 max-w-3xl max-h-3/6 mx-auto overflow-scroll flex flex-col justify-between items-center mb-4 relative">
             {/* content */}
