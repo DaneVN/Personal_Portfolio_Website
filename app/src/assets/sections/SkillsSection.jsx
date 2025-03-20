@@ -46,10 +46,8 @@ export default function SkillsSection({ flag }) {
                       ? "bg-[var(--clf-blue)]"
                       : "bg-[var(--clf-pink)]"
                   }
-                  title={skill.title}
-                >
-                  {skill.desc}
-                </SkillCard>
+                  skill={skill}
+                ></SkillCard>
               );
             })}
           </div>
