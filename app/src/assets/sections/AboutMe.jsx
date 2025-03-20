@@ -14,7 +14,7 @@ export default function AboutMe({ className }) {
           <span className="text-gray-500">V</span>
         </h2>
         {!isHidden && (
-          <p className="mb-15">
+          <p className="mx-32 mb-15">
             Hey there! I’m a passionate software developer who loves turning
             ideas into sleek, functional, and user-friendly applications.
             Whether it’s crafting beautiful UIs with React.js or building

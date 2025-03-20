@@ -24,7 +24,7 @@ export default function ContactForm() {
           placeholder="Feedback or message here..."
         />
         <button
-          className="bg-[var(--clb-accent)] rounded-md col-start-3"
+          className="bg-[var(--clb-lightest)] active:bg-[var(--clb-lighter)] rounded-md col-start-3"
           type="submit"
         >
           Submit
