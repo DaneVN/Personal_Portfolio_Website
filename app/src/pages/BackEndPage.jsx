@@ -49,7 +49,7 @@ const FrontEndPage = () => {
           className="font-extrabold py-16 hover:cursor-pointer"
           onClick={toggleHidden}
         >
-          Cool Stuff I’ve Built (Click them){" "}
+          Cool Stuff I’ve Built (Click on them for more information){" "}
           <span className="text-gray-400">V</span>
         </h2>
         {!isHidden && (
