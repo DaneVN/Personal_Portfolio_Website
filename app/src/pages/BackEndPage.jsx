@@ -53,19 +53,26 @@ const FrontEndPage = () => {
           <span className="text-gray-400">V</span>
         </h2>
         {!isHidden && (
-          <div className="flex flex-wrap justify-center gap-10 mb-15">
+          <div
+            className="flex overflow-x-scroll snap-x snap-mandatory 
+            justify-start gap-5 px-10 mb-15 scrollbar-thin scrollbar-thumb-gray-400"
+          >
             {backEndProjects.map((project) => {
               return (
                 <button
                   key={project.index}
-                  className="overflow-hidden hover:scale-110 transition-all rounded-md outline-[var(--clb-lightest)] outline-dotted outline-8"
+                  className="hover:scale-100 transition-all rounded-md 
+                  outline-[var(--clb-lightest)] outline-dotted outline-8 
+                  flex-shrink-0 snap-center scale-90"
                   onClick={() => OpenModal({ ...project })}
                 >
-                  <img
-                    className="w-[200px] h-[200px] sm:w-[300px] sm:h-[300px]"
-                    src={project.imgPath}
-                    alt={project.name}
-                  />
+                  <div className="w-fit h-[200px] sm:h-[300px] overflow-hidden">
+                    <img
+                      className="w-full h-full object-cover"
+                      src={project.imgPath}
+                      alt={project.name}
+                    />
+                  </div>
                 </button>
               );
             })}

@@ -29,7 +29,7 @@ export default function SkillsSection({ flag }) {
               return (
                 <SkillCard
                   key={index}
-                  className="bg-[var(--clb-lighter)] overflow-hidden hover:scale-110 transition-all"
+                  className="bg-[var(--clb-lighter)]"
                   skill={skill}
                 ></SkillCard>
               );

@@ -14,7 +14,7 @@ const HomePage = () => {
           h-[15vh] w-[70vw] rounded-2xl text-2xl sm:text-3xl md:text-5xl font-serif flex gap-3 justify-center items-center"
           to="/frontend"
         >
-          Website Design
+          Website Development
           <img src="/assets/RightArrow1.svg" className="w-16" />
         </NavLink>
         <NavLink
@@ -23,7 +23,7 @@ const HomePage = () => {
           sm:text-3xl md:text-5xl font-serif flex gap-3 justify-center items-center"
           to="/backend"
         >
-          Game Design
+          Game Development
           <img src="/assets/RightArrow1.svg" className="w-16" />
         </NavLink>
       </section>

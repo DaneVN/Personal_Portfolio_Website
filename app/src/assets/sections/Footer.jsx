@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center p-10 pb-0 w-full">
+    <footer className="flex flex-col items-center p-10  w-full">
       <div className="flex gap-10">
         <a
           href="https://github.com/DaneVN"

@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function AboutMe({ className }) {
-  const [isHidden, setIsHidden] = React.useState(true);
+  const [isHidden, setIsHidden] = React.useState(false);
 
   function toggleHidden() {
     setIsHidden(!isHidden);
@@ -17,7 +17,7 @@ export default function AboutMe({ className }) {
           <span className="text-gray-400">V</span>
         </h2>
         {!isHidden && (
-          <p className="mx-32 mb-15">
+          <p className="sm:mx-32 mb-15">
             Hey there! I’m a passionate software developer who loves turning
             ideas into sleek, functional, and user-friendly applications.
             Whether it’s crafting beautiful UIs with React.js or building
