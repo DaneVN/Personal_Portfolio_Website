@@ -46,6 +46,7 @@ export default function ProjectModal({
               className="bg-[var(--clf-offWhite)] p-4 rounded-2xl max-w-8/12 max-h-4/6 mx-auto overflow-scroll 
               flex flex-col justify-between items-center mb-4 border-4 border-dotted border-[var(--clb-lightest)]"
               onClick={(e) => e.stopPropagation()}
+              aria-modal="true"
             >
               {/* content */}
               <button
@@ -70,7 +71,7 @@ export default function ProjectModal({
                 </a>
                 <div>
                   <br />
-                  <p>{project.desc}</p>
+                  <p role="dialog">{project.desc}</p>
                 </div>
               </div>
             </div>
