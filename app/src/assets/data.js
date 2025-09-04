@@ -2,9 +2,24 @@ const frontEndProjects = [
   {
     index: 0,
     name: "Homeloan Junction Landing page",
-    desc: `A mobile-first, laptop friendly webpage that helps clients of the Real estate Financing company, Homeloan Junction
-    find what information and to whom they need to send that information to. It makes use of the React-router-DOM package and 
-    TailwindCSS For styling`,
+    desc: `This React app serves as an interactive guide for commercial property finance, helping users assess loan eligibility through questionnaires and access educational 
+    content on topics like LTV ratios, repayment structures, and investor perspectives. It's structured as a single-page application (SPA) using React Router for client-side 
+    routing, with dynamic paths like /:path for question flows and /critical-information/:tabId for tabbed info pages, plus fallback to a custom ErrorPage for invalid routes.
+    The root Layout.jsx composes a consistent shell with Header, NavBar (likely pulling tabs from NavData.jsx), Outlet for nested route content, and Footer.
+    Home.jsx delivers static informational sections on commercial vs. residential properties, incorporating external links (e.g., to Investopedia) and a custom useIsVisible 
+    hook—probably wrapping IntersectionObserver—to trigger smooth fade-in animations on scroll via refs and transition classes.
+    CriticalInfoPage.jsx (aliased as UsefulInfoPage in code) uses useParams to extract :tabId, then lookups matching content from the infoTabs array in NavData.jsx, rendering 
+    it dynamically or showing a not-found message if absent.
+    The core interactivity revolves around a branching questionnaire system defined in questionData.js as a decision tree object, with entry points (e.g., "commercial" or 
+    "buying"), questions (bool/number/select types with options), and conditional next functions that evaluate answers to advance to subsequent question IDs or endpoints 
+    (which provide tailored email addresses and instructions).
+    Question.jsx handles individual questions as form components, using useState for answer tracking and useSearchParams to persist responses in the URL query string (e.g.,
+     ?q1=Retail) for bookmarkable/shareable state without localStorage. On submit, it calls a parent onSubmit prop to progress the flow, disabling the button until an answer
+      is provided.
+    ContactPage.jsx facilitates outreach with a custom ButtonMailto component for mailto: links, conditional image templates (desktop/mobile variants), and useNavigate for 
+    programmatic routing back home.
+    Styling leans on CSS variables (e.g., --cl-darkDusty, --cl-red) and utility classes for responsive flex/grids, shadows, and hovers—suggesting Tailwind integration. Fully 
+    client-side with no API calls or external state; relies on static data structures for content and logic, making it lightweight and fast-loading.`,
     link: "https://homeloan-junction-commercial.netlify.app/",
     imgPath: "/assets/HLJ-Landingpage.png",
   },
