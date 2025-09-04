@@ -74,13 +74,20 @@ const FrontEndPage = () => {
           </div>
         )}
       </section>
+      {/* Close modal if focus is lost (click outside) */}
       {isModalOpen && (
         <ProjectModal
           closeModalFn={CloseModal}
           isModalOpen={isModalOpen}
           project={selectedProject}
+          onClickFn={(e) => {
+            if (e.target === e.currentTarget) {
+              CloseModal();
+            }
+          }}
         />
       )}
+
       <ContactMe className="bg-[var(--clf-pink)]" />
     </div>
   );
