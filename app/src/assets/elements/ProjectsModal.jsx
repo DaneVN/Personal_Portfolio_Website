@@ -1,11 +1,35 @@
 import React from "react";
 
+/* Props:
+  onClose: function to close the modal
+  isModalOpen: boolean to check if the modal is open
+  project: object containing project details (name, desc, imgPath, link)
+  onBackgroundClick : function to handle click events on the background
+*/
+
 export default function ProjectModal({
-  closeModalFn,
+  onClose,
   isModalOpen,
   project,
-  onClickFn,
+  onBackgroundClick,
 }) {
+  React.useEffect(() => {
+    function handleEsc(e) {
+      if (e.key === "Escape") onClose();
+    }
+    if (isModalOpen) window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isModalOpen]);
+
+  React.useEffect(() => {
+    if (isModalOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isModalOpen]);
+
   if (isModalOpen)
     if (!project) return <></>;
     else
@@ -14,18 +38,18 @@ export default function ProjectModal({
           {/* bg */}
           <div
             className="z-20 fixed top-0 left-0 w-full h-full flex justify-center items-center backdrop-blur 
-        text-[var(--clf-dark)] text-[1.5rem]"
-            onClick={onClickFn}
+            text-[var(--clf-dark)] text-[1.5rem]"
+            onClick={onBackgroundClick}
           >
             {/* container */}
             <div
               className="bg-[var(--clf-offWhite)] p-4 rounded-2xl max-w-8/12 max-h-4/6 mx-auto overflow-scroll 
-          flex flex-col justify-between items-center mb-4 border-4 border-dotted border-[var(--clb-lightest)]"
+              flex flex-col justify-between items-center mb-4 border-4 border-dotted border-[var(--clb-lightest)]"
               onClick={(e) => e.stopPropagation()}
             >
               {/* content */}
               <button
-                onClick={closeModalFn}
+                onClick={onClose}
                 className="self-end rounded-full px-3 pb-2 hover:bg-[var(--clf-dark)] hover:text-[var(--clf-offWhite)]"
               >
                 x

@@ -10,7 +10,7 @@ export default function AboutMe({ className }) {
     <>
       <section className={`p-1 ${className}`} id="section3">
         <h2
-          className="font-extrabold py-16 hover:cursor-pointer"
+          className="font-extrabold py-16 hover:cursor-pointer hover:scale-105 transition-all"
           onClick={toggleHidden}
         >
           Who Am I? (Spoiler: A Code Enthusiast!){" "}

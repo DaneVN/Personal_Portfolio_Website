@@ -46,7 +46,7 @@ const FrontEndPage = () => {
 
       <section id="section4" className="py-4 p-1 bg-[var(--clb-accent)]">
         <h2
-          className="font-extrabold py-16 hover:cursor-pointer"
+          className="font-extrabold py-16 hover:cursor-pointer hover:scale-105 transition-all"
           onClick={toggleHidden}
         >
           Cool Stuff I’ve Built (Click on them for more information){" "}
@@ -79,12 +79,17 @@ const FrontEndPage = () => {
           </div>
         )}
       </section>
-
+      {/* Close modal if focus is lost (click outside) */}
       {isModalOpen && (
         <ProjectModal
-          closeModalFn={CloseModal}
+          onClose={CloseModal}
           isModalOpen={isModalOpen}
           project={selectedProject}
+          onBackgroundClick={(e) => {
+            if (e.target === e.currentTarget) {
+              CloseModal();
+            }
+          }}
         />
       )}
 

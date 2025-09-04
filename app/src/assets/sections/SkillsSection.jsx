@@ -17,7 +17,7 @@ export default function SkillsSection({ flag }) {
         className="p-1 bg-[var(--clb-accent)] flex flex-col items-center"
       >
         <h2
-          className="font-extrabold w-full py-16 hover:cursor-pointer"
+          className="font-extrabold w-full py-16 hover:cursor-pointer hover:scale-105 transition-all"
           onClick={toggleHidden}
         >
           What I Bring to the Table (Tech Skills)
