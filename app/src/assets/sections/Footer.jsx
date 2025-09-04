@@ -39,7 +39,7 @@ export default function Footer() {
           created by <span className="font-bold"> Dané van Niekerk </span>
         </p>
         <p>
-          Last Update: <span>24 March 2025</span>
+          Last Update: <span>4 September 2025</span>
         </p>
       </div>
     </footer>

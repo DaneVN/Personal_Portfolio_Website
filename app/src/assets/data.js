@@ -11,18 +11,27 @@ const frontEndProjects = [
   {
     index: 1,
     name: "RE/MAX Tracking app",
-    desc: `A mobile-based webpage that helps agents keep track of all their monthly activities, and provide stats on the data 
-    collected in the current and previous month`,
+    desc: `This React-based web app serves as a mobile-friendly tool for RE/MAX real estate agents to track monthly activities, monitor progress toward goals, and calculate 
+    commissions. Built with React hooks for state management (useState for reactive data, useEffect for lifecycle handling like initial data loading and month-based resets, 
+    and useRef for tracking one-time checks), it leverages localStorage to persist user data across sessions—initializing state from stored JSON or defaulting to an empty 
+    structure with arrays for current activities, previous months' progress, and ongoing trackers.
+    The main component orchestrates the UI as a responsive grid (using CSS flex/grid for mobile/desktop layouts), rendering specialized cards: DueCard lists pending tasks, 
+    ProgressCard displays completion metrics, SheetCard handles editable tracking sheets with update callbacks to sync state, GraphCard visualizes historical data (likely via 
+    a charting lib like Chart.js, inferred from the data structure), and CalculatorCard provides a form-driven commission calculator. The calculator uses controlled inputs and 
+    refs to toggle modes (e.g., fixed gross vs. percentage-based), submitting data to a pure JS utility function (CommissionCalculator.js) that computes breakdowns—including VAT 
+    (at 15%), royalties, splits, and PAYE—returning formatted results as a locale-aware currency object for display in a results component.
+    Styling relies on CSS variables and classes, with no external state libs needed due to the app's focused scope. Overall, it's a lightweight SPA emphasizing data persistence, 
+    conditional rendering for loading/month resets, and modular components for maintainability, making it easy to extend with more analytics or API integrations.`,
     link: "https://remax-tracking-app.netlify.app/",
     imgPath: "/assets/REMAXTrackingApp.png",
   },
   {
     index: 2,
-    name: "Dashboard extention",
-    desc: `A custom dashboard extention that uses API's and JavaScript to give live data on weather, Dogecoin and the current time. 
-    The background changes everytime the page loads`,
-    link: "https://dane-dashboard-extention.netlify.app/",
-    imgPath: "/assets/dashboard-extention.png",
+    name: "Podcast app",
+    desc: ` A website that functions the same as a generic podcast app using API's State Store and other higher level 
+    programming concepts to achieve a suitable UI/UX design. It makes use of React.js, TailwindCSS and the Context API`,
+    link: "https://dane-podcast-app.netlify.app/",
+    imgPath: "/assets/dane-podcast-app.png",
   },
   {
     index: 3,
@@ -42,11 +51,11 @@ const frontEndProjects = [
   },
   {
     index: 5,
-    name: "Podcast app",
-    desc: `A website that functions the same as a generic podcast app using API's State Store and other higher level 
-    programming concepts`,
-    link: "https://dane-podcast-app.netlify.app/",
-    imgPath: "/assets/dane-podcast-app.png",
+    name: "Dashboard extention",
+    desc: `A custom dashboard extention that uses API's and JavaScript to give live data on weather, Dogecoin and the current time. 
+    The background changes everytime the page loads`,
+    link: "https://dane-dashboard-extention.netlify.app/",
+    imgPath: "/assets/dashboard-extention.png",
   },
 ];
 
