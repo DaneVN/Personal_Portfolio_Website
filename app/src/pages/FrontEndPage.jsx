@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import IntroSection from "../assets/sections/IntroSection";
 import AboutMe from "../assets/sections/AboutMe";
 import ContactMe from "../assets/sections/ContactMeSection";
@@ -10,7 +10,15 @@ const FrontEndPage = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [selectedProject, setSelectedProject] = React.useState(null);
   const [isHidden, setIsHidden] = React.useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Update state when timer completes
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
   function CloseModal() {
     setIsModalOpen(false);
   }
@@ -26,69 +34,77 @@ const FrontEndPage = () => {
     }
     setIsModalOpen(true);
   }
-
   function toggleHidden() {
     setIsHidden(!isHidden);
   }
 
   return (
     <div className="bg-[var(--clf-offWhite)] text-[var(--clf-dark)]">
-      <IntroSection bg="bg-[var(--clf-pink)]" />
+      {isLoading ? (
+        <div className="flex flex-col items-center justify-center h-screen gap-4">
+          <p className="text-xl animate-spin">|</p>
+          <h1 className="text-[var(--clf-dark)] text-4xl font-bold">
+            Loading content...
+          </h1>
+        </div>
+      ) : (
+        <>
+          <SkillsSection flag="front" />
 
-      <SkillsSection flag="front" />
+          <AboutMe />
 
-      <AboutMe />
+          <section id="section4" className="p-2 bg-[var(--clf-blue)]">
+            <h2
+              className="font-extrabold py-16 hover:cursor-pointer hover:scale-105 transition-all"
+              onClick={toggleHidden}
+            >
+              Cool Stuff I’ve Built (Click on them for more information){" "}
+              <span className="text-gray-400">V</span>
+            </h2>
+            {!isHidden && (
+              <div
+                className="flex overflow-x-scroll snap-x snap-mandatory 
+            justify-start gap-5 px-10 mb-15 scrollbar-thin scrollbar-thumb-gray-400"
+              >
+                {frontEndProjects.map((project) => {
+                  return (
+                    <button
+                      key={project.index}
+                      className="hover:scale-100 transition-all rounded-md 
+                    outline-[var(--clb-lightest)] outline-dotted outline-8 
+                    flex-shrink-0 snap-center scale-90"
+                      onClick={() => OpenModal({ ...project })}
+                    >
+                      <div className="w-fit h-[200px] sm:h-[300px] overflow-hidden">
+                        <img
+                          className="w-full h-full object-cover"
+                          src={project.imgPath}
+                          alt={project.name}
+                        />
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </section>
+          {/* Close modal if focus is lost (click outside) */}
+          {isModalOpen && (
+            <ProjectModal
+              onClose={CloseModal}
+              isModalOpen={isModalOpen}
+              project={selectedProject}
+              onBackgroundClick={(e) => {
+                if (e.target === e.currentTarget) {
+                  CloseModal();
+                }
+              }}
+            />
+          )}
 
-      <section id="section4" className="p-2 bg-[var(--clf-blue)]">
-        <h2
-          className="font-extrabold py-16 hover:cursor-pointer hover:scale-105 transition-all"
-          onClick={toggleHidden}
-        >
-          Cool Stuff I’ve Built (Click on them for more information){" "}
-          <span className="text-gray-400">V</span>
-        </h2>
-        {!isHidden && (
-          <div
-            className="flex overflow-x-scroll snap-x snap-mandatory 
-          justify-start gap-5 px-10 mb-15 scrollbar-thin scrollbar-thumb-gray-400"
-          >
-            {frontEndProjects.map((project) => {
-              return (
-                <button
-                  key={project.index}
-                  className="hover:scale-100 transition-all rounded-md 
-                  outline-[var(--clb-lightest)] outline-dotted outline-8 
-                  flex-shrink-0 snap-center scale-90"
-                  onClick={() => OpenModal({ ...project })}
-                >
-                  <div className="w-fit h-[200px] sm:h-[300px] overflow-hidden">
-                    <img
-                      className="w-full h-full object-cover"
-                      src={project.imgPath}
-                      alt={project.name}
-                    />
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        )}
-      </section>
-      {/* Close modal if focus is lost (click outside) */}
-      {isModalOpen && (
-        <ProjectModal
-          onClose={CloseModal}
-          isModalOpen={isModalOpen}
-          project={selectedProject}
-          onBackgroundClick={(e) => {
-            if (e.target === e.currentTarget) {
-              CloseModal();
-            }
-          }}
-        />
+          <ContactMe className="bg-[var(--clf-pink)]" />
+        </>
       )}
-
-      <ContactMe className="bg-[var(--clf-pink)]" />
     </div>
   );
 };
