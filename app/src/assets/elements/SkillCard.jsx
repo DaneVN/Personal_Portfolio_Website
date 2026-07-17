@@ -9,7 +9,7 @@ export default function SkillCard({ className, skill, handleClick }) {
         onClick={handleClick}
       >
         <span className="font-bold">{skill.title}</span>
-        {skill.desc}
+        <p className="text-lg">{skill.desc}</p>
         {skill.link != "" && (
           <a
             href={skill.link}

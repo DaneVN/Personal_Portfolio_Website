@@ -38,7 +38,7 @@ export default function ProjectModal({
           {/* bg */}
           <div
             className="z-20 fixed top-0 left-0 w-full h-full flex justify-center items-center backdrop-blur 
-            text-[var(--clf-dark)] text-[1.5rem]"
+            text-[var(--clf-dark)] text-center text-lg"
             onClick={onBackgroundClick}
           >
             {/* container */}

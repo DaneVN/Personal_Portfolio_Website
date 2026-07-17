@@ -2,11 +2,11 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 export default function Header() {
-  const location = useLocation(); // Get the current location
+  const location = useLocation(); // Get the current location/url path
   const isHome = location.pathname === "/"; // Check if the current path is "/"
   return (
     <header className="bg-[#242424] sticky top-0 z-90">
-      <nav className="grid grid-cols-4 p-5 gap-2 text-2xl sm:text-4xl md:text-6xl">
+      <nav className="grid grid-cols-4 p-5 gap-2 text-2xl">
         <NavLink
           to="/"
           className="col-span-1 self-center"
@@ -21,7 +21,7 @@ export default function Header() {
         >
           Home
         </NavLink>
-        <span className="col-span-3 flex justify-evenly items-center text-xs sm:text-xl md:text-3xl">
+        <span className="col-span-3 flex justify-evenly items-center text-sm sm:text-lg">
           {/* Conditionally render frontend and backend links only if NOT on the home page */}
           {!isHome && (
             <>

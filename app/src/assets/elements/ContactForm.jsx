@@ -9,7 +9,7 @@ export default function ContactForm() {
     >
       <div>
         <input
-          className="rounded-md border-[var(--clf-dark)] border-2 px-2 py-1"
+          className="rounded-md border-[var(--clf-dark)] border-2 px-2 py-1 text-lg"
           id="email"
           type="email"
           name="email"
@@ -18,7 +18,7 @@ export default function ContactForm() {
       </div>
       <div className="grid grid-cols-3 gap-4 w-full">
         <textarea
-          className="rounded-md col-span-2 col-start-1 border-[var(--clf-dark)] border-2 px-2 py-1"
+          className="rounded-md col-span-2 col-start-1 border-[var(--clf-dark)] border-2 px-2 py-1 text-lg"
           name="message"
           id="message"
           placeholder="Feedback or message here..."

@@ -17,7 +17,7 @@ export default function AboutMe({ className }) {
           <span className="text-gray-400">V</span>
         </h2>
         {!isHidden && (
-          <p className="sm:mx-32 mb-15" role="dialog">
+          <p className="sm:mx-32 mb-15 text-lg" role="dialog">
             Hey there! I’m a passionate software developer who loves turning
             ideas into sleek, functional, and user-friendly applications.
             Whether it’s crafting beautiful UIs with React.js or building
